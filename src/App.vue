@@ -14,4 +14,31 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
+
+:root {
+  --bg-color: #2f3542;
+  --text-color-1: #ffffff;
+  --text-color-2: #f1f2f6;
+  --color-dark-1: #2ed573;
+  --color-light-1: #5ad08b;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+}
 </style>
