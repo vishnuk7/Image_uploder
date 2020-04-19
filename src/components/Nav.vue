@@ -4,7 +4,7 @@
       <img src="../assets/photo.svg" alt="photo" />
     </div>
     <div class="nav-items">
-      <a href class="nav-item">Login</a>
+      <a @click="login" href="#" class="nav-item">Login</a>
     </div>
   </div>
 </template>
