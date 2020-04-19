@@ -17,7 +17,7 @@ const mutations = {
   },
 };
 
-const action = {
+const actions = {
   //mutations.setToken //bad!!
   //don't call the mutations directly
   //calling mutations we use the commit function
@@ -35,5 +35,5 @@ export default {
   state,
   getters,
   mutations,
-  action,
+  actions,
 };
