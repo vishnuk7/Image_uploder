@@ -11,7 +11,7 @@ const getters = {
   },
 };
 
-const mutation = {
+const mutations = {
   setToken(state, token) {
     state.token = token;
   },
@@ -29,4 +29,11 @@ const action = {
   login() {
     api.login();
   },
+};
+
+export default {
+  state,
+  getters,
+  mutations,
+  action,
 };
