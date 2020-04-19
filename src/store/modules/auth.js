@@ -9,6 +9,10 @@ const getters = {
   },
 };
 
-const action = {};
+const mutation = {
+  setToken(state, token) {
+    state.token = token;
+  },
+};
 
-const mutation = {};
+const action = {};
