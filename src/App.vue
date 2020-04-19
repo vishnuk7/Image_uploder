@@ -1,11 +1,15 @@
 <template>
   <div class="app">
-    <p>I'm an App</p>
+    <Nav />
   </div>
 </template>
 <script>
+import Nav from "./components/Nav";
 export default {
-  name: "App"
+  name: "App",
+  components: {
+    Nav
+  }
 };
 </script>
 
