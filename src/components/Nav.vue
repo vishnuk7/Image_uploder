@@ -10,8 +10,16 @@
 </template>
 
 <script>
+import { mapAction } from "vuex";
+
 export default {
-  name: "Nav"
+  name: "Nav",
+  methods: {
+    /*... if there are more than one properties then you have 
+    to use this way otherwise simply method:mapAction(["login"])
+    */
+    ...mapAction(["login"])
+  }
 };
 </script>
 
