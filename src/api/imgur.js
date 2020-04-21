@@ -2,7 +2,7 @@ import qs from "qs";
 
 const CLIENT_ID = process.env.VUE_APP_CLIENT_ID;
 const ROOT_URL = "https://api.imgur.com";
-
+console.log(CLIENT_ID);
 export default {
   login() {
     const querystring = {

@@ -1,9 +1,16 @@
 <template>
   <div class="nav">
-    <div class="brand">
-      <img src="../assets/photo.svg" alt="photo" />
+    <div class="sidebar">
+      <div class="brand">
+        <img src="../assets/photo.svg" alt="photo" />
+      </div>
+      <div class="nav-items">
+        <div class="nav-item">
+          <a href>Gallery</a>
+        </div>
+      </div>
     </div>
-    <div class="nav-items">
+    <div class="nav-items__login">
       <a @click="login" href="#" class="nav-item">Login</a>
     </div>
   </div>
@@ -25,11 +32,16 @@ export default {
 
 <style lang="css" scoped>
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 1fr 100vh;
   font-size: 1.7rem;
   color: var(--text-color-1);
   margin: 1rem 2rem;
+}
+
+.sidebar {
+  grid-row: 1/-1;
 }
 
 .brand img {
@@ -37,7 +49,15 @@ export default {
   /* height: 2rem; */
 }
 
-.nav-items a {
+.nav-item a {
+  color: var(--text-color-2);
+}
+
+.nav-items__login {
+  justify-self: end;
+}
+
+.nav-items__login a {
   appearance: none;
   display: block;
   text-align: center;
@@ -49,7 +69,7 @@ export default {
   transition: all 0.3s;
 }
 
-.nav-items a:hover {
+.nav-items__login a:hover {
   background: var(--color-light-1);
   transform: scale(1.1);
 }
