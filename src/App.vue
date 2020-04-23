@@ -1,15 +1,20 @@
 <template>
   <div class="app">
     <Nav></Nav>
+    <div class="main">
+      <Sidebar />
+    </div>
     <router-view></router-view>
   </div>
 </template>
 <script>
 import Nav from "./components/Nav";
+import Sidebar from "./components/Sidebar";
 export default {
   name: "App",
   components: {
-    Nav
+    Nav,
+    Sidebar
   }
 };
 </script>
@@ -41,5 +46,10 @@ html {
 
 body {
   background: var(--bg-color);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
 }
 </style>

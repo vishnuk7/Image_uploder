@@ -9,26 +9,11 @@
         <a @click="login" href="#" class="nav-item__login">Login</a>
       </div>
     </div>
-    <div class="main">
-      <div class="sidebar">
-        <div class="nav-items">
-          <div class="nav-item">
-            <a href>Gallery</a>
-          </div>
-          <div class="nav-item">
-            <a href>Upload</a>
-          </div>
-          <div class="nav-item">
-            <a href>Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "Nav",
@@ -37,16 +22,12 @@ export default {
     to use this way otherwise simply method:mapAction(["login"])
     */
     ...mapActions(["login"])
-  }
+  },
+  computed: mapGetters(["isLoggedIn"])
 };
 </script>
 
 <style lang="css" scoped>
-.main {
-  display: grid;
-  grid-template-columns: 14rem 1fr;
-}
-
 .nav {
   display: grid;
   grid-template-columns: 10rem 1fr;
@@ -56,47 +37,9 @@ export default {
   padding: 2rem 4rem;
 }
 
-.sidebar {
-  height: calc(100vh - 61px);
-}
-
 .brand img {
   width: 5rem;
   /* height: 2rem; */
-}
-
-.nav-items {
-  height: 100%;
-  background: #273042;
-}
-
-.nav-item {
-  width: 100%;
-  height: calc(100% / 8);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-item a {
-  color: var(--text-color-2);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 2rem;
-  width: inherit;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s;
-}
-
-.nav-item a:hover {
-  width: 100%;
-  height: 100%;
-  background: var(--color-dark-1);
-  /* transform: scale(1.2); */
 }
 
 .nav-items__login {
