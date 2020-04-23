@@ -14,8 +14,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 :root {
   --bg-color: #2f3542;
   --text-color-1: #ffffff;
@@ -35,7 +34,8 @@ export default {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 body {
