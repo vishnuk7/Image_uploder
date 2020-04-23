@@ -1,4 +1,5 @@
 import api from "../../api/imgur";
+import qs from "qs";
 
 const state = {
   token: null,
@@ -24,6 +25,11 @@ const actions = {
   logout({ commit }) {
     //calling mutations with the help of commit function and we pass two arguments mutations name and  the value that we want to pass
     commit("setToken", null);
+  },
+
+  finalizeLogin({ commit }, hash) {
+    const access_token = qs.parse(hash.replace("#", "")).access_token;
+    commit("setToken", access_token);
   },
 
   login() {
