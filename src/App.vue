@@ -3,8 +3,8 @@
     <Nav></Nav>
     <div class="main">
       <Sidebar v-if="isLoggedIn" />
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 <script>

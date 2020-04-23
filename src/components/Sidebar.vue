@@ -2,14 +2,14 @@
   <div class="sidebar">
     <div class="nav-items">
       <div class="nav-item">
-        <a href>
+        <router-link to="/">
           <img src="../assets/gallery.svg" class="nav-item-img" />Gallery
-        </a>
+        </router-link>
       </div>
       <div class="nav-item">
-        <a href>
+        <router-link to="/upload">
           <img src="../assets/camera.svg" class="nav-item-img" />Upload
-        </a>
+        </router-link>
       </div>
       <div class="nav-item">
         <a href>Logout</a>

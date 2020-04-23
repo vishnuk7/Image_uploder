@@ -14,7 +14,7 @@ export const router = new VueRouter({
   mode: "history",
   routes: [
     { path: "/", component: Gallery },
-    { path: "/uploadFrom", component: UploadFrom },
+    { path: "/upload", component: UploadFrom },
     { path: "/oauth2/callback", component: AuthHandler },
   ],
 });

@@ -1,10 +1,11 @@
 <template>
   <div class="app">
     <div class="nav">
-      <div class="brand">
-        <img src="../assets/photo.svg" alt="photo" />
-      </div>
-
+      <router-link to="/">
+        <div class="brand">
+          <img src="../assets/photo.svg" alt="photo" />
+        </div>
+      </router-link>
       <div class="nav-items__login">
         <a v-if="!isLoggedIn" @click="login" href="#" class="nav-item__login">Login</a>
         <a v-else @click="logout" href="#" class="nav-item__login">Logout</a>
