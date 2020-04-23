@@ -6,7 +6,8 @@
       </div>
 
       <div class="nav-items__login">
-        <a @click="login" href="#" class="nav-item__login">Login</a>
+        <a v-if="!isLoggedIn" @click="login" href="#" class="nav-item__login">Login</a>
+        <a v-else @click="login" href="#" class="nav-item__login">Logout</a>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div class="app">
     <Nav></Nav>
     <div class="main">
-      <Sidebar />
+      <Sidebar v-if="isLoggedIn" />
     </div>
     <router-view></router-view>
   </div>
@@ -10,12 +10,14 @@
 <script>
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
+import { mapGetters } from "vuex";
 export default {
   name: "App",
   components: {
     Nav,
     Sidebar
-  }
+  },
+  computed: mapGetters(["isLoggedIn"])
 };
 </script>
 
