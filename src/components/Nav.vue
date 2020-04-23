@@ -7,7 +7,7 @@
 
       <div class="nav-items__login">
         <a v-if="!isLoggedIn" @click="login" href="#" class="nav-item__login">Login</a>
-        <a v-else @click="login" href="#" class="nav-item__login">Logout</a>
+        <a v-else @click="logout" href="#" class="nav-item__login">Logout</a>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
     /*... if there are more than one properties then you have 
     to use this way otherwise simply method:mapAction(["login"])
     */
-    ...mapActions(["login"])
+    ...mapActions(["login", "logout"])
   },
   computed: mapGetters(["isLoggedIn"])
 };

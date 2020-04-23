@@ -2,10 +2,14 @@
   <div class="sidebar">
     <div class="nav-items">
       <div class="nav-item">
-        <a href>Gallery</a>
+        <a href>
+          <img src="../assets/gallery.svg" class="nav-item-img" />Gallery
+        </a>
       </div>
       <div class="nav-item">
-        <a href>Upload</a>
+        <a href>
+          <img src="../assets/camera.svg" class="nav-item-img" />Upload
+        </a>
       </div>
       <div class="nav-item">
         <a href>Logout</a>
@@ -57,5 +61,10 @@ export default {
   height: 100%;
   background: var(--color-dark-1);
   /* transform: scale(1.2); */
+}
+
+.nav-item-img {
+  width: 3rem;
+  margin-right: 1rem;
 }
 </style>
