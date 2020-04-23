@@ -26,7 +26,7 @@ const actions = {
   logout({ commit }) {
     //calling mutations with the help of commit function and we pass two arguments mutations name and  the value that we want to pass
     commit("setToken", null);
-    window.localStorage.setItem("imgur_token", null);
+    window.localStorage.removeItem("imgur_token");
   },
 
   finalizeLogin({ commit }, hash) {
