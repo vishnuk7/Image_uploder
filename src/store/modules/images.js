@@ -9,16 +9,16 @@ const getters = {
 };
 
 const actions = {
-  async fetchImages({ rootState }) {
+  async fetchImages({ rootState, commit }) {
     const { token } = rootState.auth;
     const res = await api.fetchImage(token);
     console.log(token);
-    console.log(res);
+    commit("setImages", res.data.data);
   },
 };
 
 const mutations = {
-  setImgaes(state, images) {
+  setImages(state, images) {
     state.images = images;
   },
 };
