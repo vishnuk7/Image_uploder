@@ -12,6 +12,7 @@ const actions = {
   async fetchImages({ rootState }) {
     const { token } = rootState.auth;
     const res = await api.fetchImage(token);
+    console.log(token);
     console.log(res);
   },
 };
