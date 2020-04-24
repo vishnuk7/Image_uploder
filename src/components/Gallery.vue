@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Gallery
-    {{ allImages.length }}
+  <div class="gallery">
+    <div v-for="image in allImages" :key="image.id" class="gallery-item">
+      <img :src="image.link" alt="image.id" />
+    </div>
   </div>
 </template>
 
@@ -16,3 +17,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+</style>
