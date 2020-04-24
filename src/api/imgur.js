@@ -28,6 +28,7 @@ export default {
     const promise = Array.from(images).map((image) => {
       const formDate = new FormData();
       formDate.append("image", image);
+
       return axios.post(`${ROOT_URL}/3/image`, formDate, {
         headers: {
           Authorization: `Bearer ${token}`,
