@@ -15,6 +15,12 @@ const actions = {
     console.log(token);
     commit("setImages", res.data.data);
   },
+
+  async uploadImages({ rootState }, images) {
+    const { token } = rootState.auth;
+    console.log(token);
+    console.log(images);
+  },
 };
 
 const mutations = {

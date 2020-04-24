@@ -11,9 +11,6 @@
           <img src="../assets/camera.svg" class="nav-item-img" />Upload
         </router-link>
       </div>
-      <div class="nav-item">
-        <a href>Logout</a>
-      </div>
     </div>
   </div>
 </template>
@@ -32,6 +29,10 @@ export default {
 .nav-items {
   height: 100%;
   background: #273042;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-item {
