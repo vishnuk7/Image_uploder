@@ -1,11 +1,15 @@
 <template>
-  <div>Gallery</div>
+  <div>
+    Gallery
+    {{ allImages.length }}
+  </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Gallery",
+  computed: mapGetters(["allImages"]),
   methods: mapActions(["fetchImages"]),
   created() {
     this.fetchImages();
