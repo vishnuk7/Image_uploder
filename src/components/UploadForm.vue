@@ -1,7 +1,14 @@
 <template>
   <div class="uploader">
     <div class="upload-droper">
-      <input @change="uploadImages" type="file" name="images" id="file" />
+      <input
+        @change="uploadImages($event.target.files)"
+        type="file"
+        name="images"
+        id="file"
+        multiple
+        accept="image/*"
+      />
       <span>Drop files here!</span>
     </div>
   </div>
